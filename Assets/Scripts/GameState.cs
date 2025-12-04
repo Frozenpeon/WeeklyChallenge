@@ -14,5 +14,6 @@ public class GameState : MonoBehaviour
     {
         actualHero = Instantiate(HeroPrefab, new Vector2(0, 0), Quaternion.identity);
         Instantiate(EnemyPrefab, new Vector2(4, -4), Quaternion.identity).GetComponent<Enemy>().target = actualHero;
+        Camera.main.GetComponent<CameraManager>().target = actualHero;
     }
 }
